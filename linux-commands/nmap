@@ -1,0 +1,11 @@
+#
+#
+#   nmap commands
+#
+#
+# -----------------------------------------------------------------------------
+
+#   - Scan the 10.10.201.0/24 network for hosts, return IP addresses.
+#   - Must be run as root.
+#
+nmap -n -sn 10.10.201.0/24 -oG - | awk '/Up$/ { print $2 }'
