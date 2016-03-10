@@ -1,0 +1,11 @@
+syntax on
+set ai
+set tabstop=4
+set expandtab
+set shiftwidth=4
+set bg=dark
+set ruler
+:hi CursorLine   cterm=NONE ctermbg=234 ctermfg=NONE guibg=darkred guifg=white
+:hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+:nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+:set cursorline

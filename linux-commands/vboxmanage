@@ -1,0 +1,3 @@
+VBoxManage list runningvms
+VBoxManage controlvm <vm> poweroff 
+

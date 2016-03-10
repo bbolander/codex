@@ -1,7 +1,6 @@
 #
-# bash_one_liners.sh
+#   bash_one_liners.sh
 #
-###############################################################################
 
 #   Change all the filenames in a directory tree that start with a capital letter
 #   to a lowercase letter.
