@@ -1,0 +1,10 @@
+#
+#   Openssl commands
+#
+#   ---------------------------------------------------------------------------
+
+#   Check cert expiration
+#
+
+openssl pkcs12 -in <p12_filename> -out <cert_filename>
+openssl x509 -enddate -noout -in <cert_filename>
