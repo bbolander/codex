@@ -1,0 +1,1 @@
+aws ec2 describe-instances --filters 'Name=tag:Name,Values=*SDP-ansible-test*' --profile dev --region us-west-2 --output json --query "Reservations[].Instances[].[PublicIpAddress,Tags]" --output text

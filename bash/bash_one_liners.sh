@@ -11,3 +11,8 @@ for file in `find testdir -type f`; do echo $file; new_f_name=`echo $file | sed 
 #
 while true; do echo -en "\n\n-- TIME: ";date; ps -aef | grep -v grep | egrep "(supervisor|vidder-server-agent|tomcat7)"; sleep 5; done
 
+
+#   Search a subnet for your machine after DHCP has changed the address on 
+#   you. 
+
+for i in {1..256}; do ssh -o ConnectTimeout=1 10.10.201.$i -i ~/.ssh/bbolander.private.rsa; done
