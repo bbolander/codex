@@ -2,6 +2,10 @@
 #   bash_one_liners.sh
 #
 
+#   To compare strings use "$s1" = "$s2" and >, <, >=, <=, !=
+#   To compare numbers use $n1 -eq $n2 and -lt, -gt, -ne
+
+
 #   Change all the filenames in a directory tree that start with a capital letter
 #   to a lowercase letter.
 #
@@ -14,5 +18,9 @@ while true; do echo -en "\n\n-- TIME: ";date; ps -aef | grep -v grep | egrep "(s
 
 #   Search a subnet for your machine after DHCP has changed the address on 
 #   you. 
-
+#
 for i in {1..256}; do ssh -o ConnectTimeout=1 10.10.201.$i -i ~/.ssh/bbolander.private.rsa; done
+
+#   Removes all core dump files from user's home directory.
+#
+find ~/ -name 'core*' -exec rm {} \;
