@@ -1,5 +1,17 @@
 export EDITOR=vim
-export PS1="\[\e[1;34m\]\u\[\e[m\]@\[\e[1;31m\]\h\[\e[m\]:\[\e[1;32;40m\]\w\[\e[m\] \n[\[\e[1;33m\]\!\[\e[m\]]> "
+
+#
+#   Regular prompt
+#
+#export PS1="\[\e[1;34m\]\u\[\e[m\]@\[\e[1;31m\]\h\[\e[m\]:\[\e[1;32;40m\]\w\[\e[m\] \n[\[\e[1;33m\]\!\[\e[m\]]> "
+
+#
+#   Hyperprompt
+#
+export PS1="[\[\e[1;91m\]\t\[\e[m\]] \n\[\e[1;34m\]\u\[\e[m\]@\[\e[1;31m\]\h\[\e[m\]:\[\e[1;32;40m\]\w\[\e[m\] \n[\[\e[1;5;33m\]\!\[\e[m\]]> "
+
+trap 'echo -e "[\033[1;92m`date +%H:%M:%S`\033[0m]"' DEBUG
+
 
 #   Color stuff...
 #

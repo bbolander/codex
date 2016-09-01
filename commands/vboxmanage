@@ -1,3 +1,9 @@
 VBoxManage list runningvms
 VBoxManage controlvm <vm> poweroff 
 
+#
+#   Enable DNS resolution throught the host.
+#
+VBoxManage modifyvm "VM name" --natdnshostresolver1 on
+
+

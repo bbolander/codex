@@ -24,3 +24,7 @@ for i in {1..256}; do ssh -o ConnectTimeout=1 10.10.201.$i -i ~/.ssh/bbolander.p
 #   Removes all core dump files from user's home directory.
 #
 find ~/ -name 'core*' -exec rm {} \;
+
+#   Start multiple jobs to run in parallel in the background.
+#
+for i in {1..8}; do nohup ~/installers/athena-db/DeleteBackUpsFiles.sh /ngs${i}/app/aidep/data/disk/features/aggregate/backups 60 NORMAL  > backup_delete_${i}.log & done

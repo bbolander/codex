@@ -1,0 +1,2 @@
+index=ast2_core sourcetype=<log file type> 
+index=ast2_core sourcetype=ast2_pxy_log host="ma1-aidet-lapp11*" sourcetype=ast2_pxy_log
